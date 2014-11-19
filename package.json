@@ -1,0 +1,19 @@
+{
+  "name": "cookie-dough",
+  "version": "0.0.0",
+  "description": "An isomorphic JavaScript cookie library",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/saponifi3d/cookie-dough.git"
+  },
+  "dependencies": { },
+  "devDependencies": { },
+  "keywords": [
+    "isomorphic",
+    "cookie",
+    "cookie-dough"
+  ],
+  "author": "Josh Callender <saponifi3d@gmail.com>",
+  "license": "MIT"
+}
