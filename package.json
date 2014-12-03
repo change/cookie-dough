@@ -3,12 +3,21 @@
   "version": "0.0.0",
   "description": "An isomorphic JavaScript cookie library",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/saponifi3d/cookie-dough.git"
   },
-  "dependencies": { },
-  "devDependencies": { },
+  "dependencies": {
+    "cookie": "^0.1.2"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1",
+    "sinon": "^1.12.1"
+  },
   "keywords": [
     "isomorphic",
     "cookie",
