@@ -14,9 +14,12 @@
     "cookie": "^0.1.2"
   },
   "devDependencies": {
+    "browserify": "^7.0.0",
     "chai": "^1.10.0",
+    "gulp": "^3.8.10",
     "mocha": "^2.0.1",
-    "sinon": "^1.12.1"
+    "sinon": "^1.12.1",
+    "vinyl-transform": "^1.0.0"
   },
   "keywords": [
     "isomorphic",
