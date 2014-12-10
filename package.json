@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "An isomorphic JavaScript cookie library",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "mocha"
   },
@@ -21,11 +24,20 @@
     "sinon": "^1.12.1",
     "vinyl-transform": "^1.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saponifi3d/cookie-dough.git"
+  },
   "keywords": [
     "isomorphic",
+    "rendr",
     "cookie",
     "cookie-dough"
   ],
-  "author": "Josh Callender <saponifi3d@gmail.com>",
-  "license": "MIT"
+  "author": "Josh Callender <saponifi3d@gmail.com> (https://github.com/saponifi3d)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saponifi3d/cookie-dough/issues"
+  },
+  "homepage": "https://github.com/saponifi3d/cookie-dough"
 }
