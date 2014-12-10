@@ -1,43 +1,30 @@
 var cookie = require('cookie'),
     isServer = !!(typeof window === 'undefined');
 
-function CookieDough(req) {
-  var parsedCookies;
-
-  if (isServer) {
-    if (!req) {
-      throw new Error('Must specify `req` for cookie-dough');
-    }
-
-    parsedCookies = req.cookies;
-  } else {
-    parsedCookies = cookie.parse(document.cookie);
-  }
-
-  this.get = function get(name) {
-    return parsedCookies[name];
-  };
-
-  this.set = function set(name, value, options) {
-    parsedCookies[name] = value;
-
-    if (isServer) {
-      var res = options && options.res;
-      if (!res) {
-        throw new Error('Must specify `res` when setting cookie');
+if (isServer) {
+  module.exports = function (req) {
+    return {
+      set: req.res.cookie,
+      get: function (name) {
+        return req.cookies[name];
+      },
+      remove: function (name) {
+        req.res.cookie(name, '', { expires: new Date(0) });
       }
-
-      return res.cookie(name, value, options);
-    } else {
-      return document.cookie = cookie.serialize(name, value, options);
     }
   };
-
-  this.remove = function remove(name) {
-    this.set(key, '', { expires: new Date(0) });
-    delete parsedCookies[name];
-  };
-
+} else {
+  module.exports = function () {
+    return {
+      set: function (name, value, options) {
+        return document.cookie = cookie.serialize(name, value, options);
+      },
+      get: function (name) {
+        return cookie.parse(document.cookie)[name];
+      },
+      remove: function (name) {
+        return !!(document.cookie = cookie.serialize(name, '', { expires: new Date(0) }));
+      }
+    }
+  }
 }
-
-module.exports = CookieDough;
