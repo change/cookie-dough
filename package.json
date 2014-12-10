@@ -29,10 +29,11 @@
     "url": "https://github.com/saponifi3d/cookie-dough.git"
   },
   "keywords": [
-    "isomorphic",
-    "rendr",
     "cookie",
-    "cookie-dough"
+    "cookies",
+    "cookie-dough",
+    "rendr",
+    "isomorphic"
   ],
   "author": "Josh Callender <saponifi3d@gmail.com> (https://github.com/saponifi3d)",
   "license": "MIT",
