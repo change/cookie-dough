@@ -12,7 +12,8 @@ Wraps https://www.npmjs.com/package/cookie to work on the client and server.  Al
 
 ```js
 // client-side
-var cookie = require('cookie-dough')(); // automatically parses the cookies for the page
+// automatically parses the cookies for the page
+var cookie = require('cookie-dough')();
 cookie.get('name');
 
 // server-side
