@@ -27,9 +27,9 @@ function CookieDough(req) {
         throw new Error('Must specify `res` when setting cookie');
       }
 
-      res.cookie(name, value, options);
+      return res.cookie(name, value, options);
     } else {
-      document.cookie = cookie.serialize(name, value, options);
+      return document.cookie = cookie.serialize(name, value, options);
     }
   };
 
