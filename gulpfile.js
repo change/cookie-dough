@@ -8,7 +8,7 @@ gulp.task('browserify', function () {
     return b.bundle();
   });
 
-  return gulp.src(['./src/*.js'])
+  return gulp.src(['index.js','test/test.js'])
     .pipe(browserified)
     .pipe(gulp.dest('./public'));
 });
