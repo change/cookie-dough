@@ -48,7 +48,7 @@ app.use(cookieParser());
 
 app.get('/', function(req, res){
   var cookie = new CookieDough(req);
-  cookie.set('name', 'value', { res: res, /* more options */ });
+  cookie.set('name', 'value', { /* options */ });
 });
 ```
 
