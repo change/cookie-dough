@@ -30,6 +30,26 @@ app.get('/', function(req, res){
 });
 ```
 
+### Getting all the cookies
+```js
+// client-side
+// automatically parses the cookies for the page
+var cookie = require('cookie-dough')();
+cookie.all();
+
+// server-side
+var express = require('express'),
+    CookieDough = require('cookie-dough'),
+    cookieParser = require('cookie-parser');
+
+var app = express();
+app.use(cookieParser());
+
+app.get('/', function(req, res){
+  var cookie = new CookieDough(req);
+  cookie.all();
+});
+```
 
 ### Setting a cookie
 
