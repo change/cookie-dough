@@ -35,6 +35,9 @@ app.get('/', function(req, res){
 // client-side
 // automatically parses the cookies for the page
 var cookie = require('cookie-dough')();
+
+// returns an object with all of the cookies
+// format: { cookieName: "cookie value" }
 cookie.all();
 
 // server-side
