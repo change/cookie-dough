@@ -10,6 +10,7 @@ app.get('/', function (req, res) {
   console.log('set', cookie.set('test', 'value5'));
   console.log('get', cookie.get('test'));
   console.log('remove', cookie.remove('test'));
+  console.log('all', cookie.all());
   res.json({});
 });
 

@@ -10,6 +10,9 @@ module.exports = function () {
     },
     remove: function (name) {
       return !!(document.cookie = cookie.serialize(name, '', { expires: new Date(0) }));
+    },
+    all: function () {
+      return cookie.parse(document.cookie);
     }
   }
 }

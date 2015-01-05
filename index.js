@@ -12,6 +12,9 @@ module.exports = function (req) {
     },
     remove: function (name) {
       return !!(req.res.cookie(name, '', { expires: new Date(0) }));
+    },
+    all: function () {
+      return req.cookies;
     }
   }
 };
