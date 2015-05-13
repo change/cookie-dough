@@ -5,12 +5,18 @@ module.exports = function () {
     set: function (name, value, options) {
       return document.cookie = cookie.serialize(name, value, options);
     },
+
     get: function (name) {
       return cookie.parse(document.cookie)[name];
     },
-    remove: function (name) {
-      return !!(document.cookie = cookie.serialize(name, '', { expires: new Date(0) }));
+
+    remove: function (name, options) {
+      var opts = options || {};
+      opts.expires = new Date(0);
+
+      return !!(document.cookie = cookie.serialize(name, '', opts));
     },
+
     all: function () {
       return cookie.parse(document.cookie);
     }
