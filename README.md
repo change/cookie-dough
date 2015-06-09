@@ -95,7 +95,7 @@ The options that you can set on a cookie:
 ```js
 // client-side
 var cookie = require('cookie-dough')();
-cookie.remove('name');
+cookie.remove('name', { /* options */ });
 
 // server-side
 var express = require('express'),
@@ -110,3 +110,11 @@ app.get('/', function(req, res){
   cookie.remove('name');
 });
 ```
+
+The options that can be set to remove a cookie are: 
+
+*path* - cookie path
+
+*expires* - absolute expiration date for the cookie (Date object)
+
+*domain* - domain for the cookie
