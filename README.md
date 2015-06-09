@@ -115,6 +115,4 @@ The options that can be set to remove a cookie are:
 
 *path* - cookie path
 
-*expires* - absolute expiration date for the cookie (Date object)
-
 *domain* - domain for the cookie
