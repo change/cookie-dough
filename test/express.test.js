@@ -20,10 +20,7 @@ describe('cookie-dough: express extension', function() {
 
       request(app)
         .get('/')
-        .expect(function(res) {
-          var cookies = res.headers['set-cookie'].join(';');
-          expect(cookies).to.contain('world=you;');
-        })
+        .expect('set-cookie', /world=you/)
         .end(done);
     });
   });
@@ -39,10 +36,7 @@ describe('cookie-dough: express extension', function() {
 
       request(app)
         .get('/')
-        .expect(function(res) {
-          var cookies = res.headers['set-cookie'].join(';');
-          expect(cookies).to.contain('handsome=;');
-        })
+        .expect('set-cookie', /handsome=me;/)
         .end(done);
     });
   });
