@@ -1,13 +1,13 @@
 var cookie = require('cookie');
 var instance = null;
 
-return {
+module.exports = {
   set: function (key, value, options) {
     return instance.set(key, value, options);
   },
 
   get: function (key) {
-    return instance.remove(key);
+    return instance.get(key);
   },
 
   remove: function (key, options) {
@@ -19,6 +19,6 @@ return {
   },
 
   init: function(ext) {
-    instance = null;
+    instance = ext;
   }
 };
