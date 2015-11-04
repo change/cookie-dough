@@ -7,11 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --harmony"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/change/cookie-dough.git"
+    "url": "https://github.com/change/cookie-dough.git"
   },
   "browser": "browser.js",
   "dependencies": {
@@ -20,14 +20,14 @@
   "devDependencies": {
     "browserify": "^10.1.3",
     "chai": "^2.3.0",
+    "cookie-parser": "^1.4.0",
+    "express": "^4.13.3",
     "gulp": "^3.8.11",
+    "koa": "^1.1.1",
     "mocha": "^2.2.4",
-    "sinon": "^1.14.1",
+    "sinon": "^1.17.2",
+    "supertest": "^1.1.0",
     "vinyl-transform": "^1.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/change/cookie-dough.git"
   },
   "keywords": [
     "cookie",

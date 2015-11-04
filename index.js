@@ -1,26 +1,24 @@
 var cookie = require('cookie');
+var instance = null;
 
-module.exports = function (req) {
-  return {
-    set: function (name, value, options) {
-      var cookieStr = cookie.serialize(name, value, options);
-      req.res.cookie.call(req.res, name, value, options);
-      return cookieStr;
-    },
+module.exports = {
+  set: function (key, value, options) {
+    return instance.set(key, value, options);
+  },
 
-    get: function (name) {
-      return req.cookies[name];
-    },
+  get: function (key) {
+    return instance.get(key);
+  },
 
-    remove: function (name, options) {
-      var opts = options || {};
-      opts.expires = new Date(0);
+  remove: function (key, options) {
+    return instance.remove(key, options);
+  },
 
-      return !!(req.res.cookie(name, '', opts));
-    },
+  all: function () {
+    return instance.all();
+  },
 
-    all: function () {
-      return req.cookies;
-    }
+  init: function(ext) {
+    instance = ext;
   }
 };
