@@ -18,5 +18,13 @@ return {
 
   all: function () {
     return cookie.parse(document.cookie);
-  }
+  },
+
+  /**
+   * no-op for client
+   *
+   * @todo
+   * throw warning instead of silently doing nothing
+   */
+  init: function() { }
 };
