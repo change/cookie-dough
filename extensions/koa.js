@@ -16,7 +16,7 @@ module.exports = function(cookies) {
       options = options || {};
       options.expires = new Date(0);
 
-      return cookie.set(key, '', options));
+      return cookies.set(key, '', options);
     },
 
     all: function () {
