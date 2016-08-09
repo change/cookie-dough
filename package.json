@@ -1,6 +1,6 @@
 {
   "name": "cookie-dough",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "An isomorphic JavaScript cookie library",
   "main": "index.js",
   "directories": {
