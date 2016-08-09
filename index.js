@@ -27,11 +27,11 @@ module.exports = function (req) {
       var opts = options || {};
       opts.expires = new Date(0);
 
-      try {
-          if (req) {
-              req.res.cookie(name, '', opts)
-          }
+      if (req) {
+          req.res.cookie(name, '', opts)
+      }
 
+      try {
           delete cookiesSet[name];
           return true;
       } catch (e) {
