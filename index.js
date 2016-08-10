@@ -7,6 +7,9 @@ module.exports = function (req) {
   return {
     set: function (name, value, options) {
       var cookieStr = cookie.serialize(name, value, options);
+      if (options.maxAge) {
+        options.maxAge *= 1000; // express expects maxAge to be in milliseconds
+      }
       req.res.cookie.call(req.res, name, value, options);
       cookiesSet[name] = value
       return cookieStr;
