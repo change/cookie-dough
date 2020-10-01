@@ -89,6 +89,7 @@ The options that you can set on a cookie:
 
 *httpOnly* - true or false
 
+*sameSite* - true, false, 'lax', 'none', 'strict'
 
 ### Removing a cookie
 
