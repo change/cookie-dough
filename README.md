@@ -1,3 +1,5 @@
+> Sorry all, this project is no longer used internally and hasn't been actively maintained in a while.  We're closing out the remaining PRs & issues and archiving it.
+
 cookie-dough
 ============
 
